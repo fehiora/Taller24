@@ -1,3 +1,38 @@
+//Modelando objetos clase del 23/07/2020
+
+var bankCount = {
+            titular: "Alex",
+            saldo : 0,
+
+            ingresar : function (valor){
+                this.saldo += valor;
+                return "Has ingresado: " + valor;
+            },
+            extraer : function (valor){
+                if(this.saldo < valor){
+                    valor = this.saldo;
+                    this.saldo = 0;
+                }else{
+                    this.saldo -= valor;
+                }
+                return "Has retirado: " + valor;
+            },
+            informar : function (){
+                return "El titular de esta cuenta es: " + this.titular + " El saldo de esta cuenta es: " + this.saldo; 
+            },   
+}
+
+console.log(bankCount.titular);
+console.log(bankCount.saldo);
+console.log("-------------");
+console.log(bankCount.ingresar(80));
+console.log(bankCount.extraer(20));
+console.log(bankCount.informar());
+
+
+
+
+
 //Aprendiendo variables y funciones clase del 21/07/2020
 function IMC (){
 
